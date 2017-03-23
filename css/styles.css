@@ -78,10 +78,7 @@
     width: 1200px;
   }
   .container {
-    width: 1050px;
-  }
-  .container-md {
-    width: 900px;
+    width: 1170px;
   }
 }
 
@@ -208,15 +205,22 @@ a:hover {
 }
 
 h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
+  font-size: 24px;
   font-size: 2.4rem;
 }
 
+h2 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
 h3 {
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0563bf;
 }
 
 *:focus {
@@ -246,7 +250,7 @@ input::-moz-focus-inner {
   font-weight: normal;
 }
 
-.bold, .logo a .title {
+.bold, h1, .logo a .title {
   font-family: "SegoeUIBold";
 }
 
@@ -530,6 +534,10 @@ header .bottom .search #search:focus:-ms-input-placeholder {
 
 /* =main
 ---------------------------*/
+section h1 {
+  text-align: center;
+}
+
 /* =footer
 ---------------------------*/
 footer {
@@ -582,8 +590,83 @@ footer .bottom .social_icons a:hover {
   opacity: .8;
 }
 
+section {
+  margin: 3.5rem 0;
+}
+
+section h1 {
+  margin-bottom: 2rem;
+}
+
+.about p {
+  margin: 2rem 0;
+}
+
 /* =members
 ---------------------------*/
+.members_items {
+  flex-wrap: wrap;
+}
+
+.members_items .item {
+  margin-right: 3.6rem;
+  margin-bottom: 2rem;
+  width: 205px;
+}
+
+.members_items .item:nth-child(5) {
+  margin-right: 0;
+}
+
+.members_items .item a {
+  display: block;
+  text-decoration: none;
+}
+
+.members_items .item a:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.members_items .item a:hover .pic {
+  opacity: .7;
+}
+
+.members_items .item a:hover .title {
+  text-decoration: underline;
+}
+
+.members_items .item .pic {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  width: 205px;
+  height: 205px;
+}
+
+.members_items .item .pic img {
+  vertical-align: top;
+}
+
+.members_items .item .desc {
+  background-color: #e6e6e6;
+  padding: 2rem 1.5rem 1.5rem 1.6rem;
+  height: 12.5rem;
+}
+
+.members_items .item .desc p.title {
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: #000;
+  line-height: 1;
+}
+
+.members_items .item .desc p:not(.title) {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #808080;
+  margin-top: .8rem;
+}
+
 /* =/members
 ---------------------------*/
 ::-ms-clear {
