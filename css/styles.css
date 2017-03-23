@@ -574,6 +574,18 @@ footer .bottom .social_icons {
   padding-top: 1rem;
 }
 
+footer .bottom .social_icons a {
+  margin-right: 0.2rem;
+}
+
+footer .bottom .social_icons a:hover {
+  opacity: .8;
+}
+
+/* =members
+---------------------------*/
+/* =/members
+---------------------------*/
 ::-ms-clear {
   display: none;
 }
