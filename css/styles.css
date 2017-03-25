@@ -217,6 +217,7 @@ h2 {
 h3 {
   font-size: 20px;
   font-size: 2rem;
+  font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -290,12 +291,12 @@ i, em {
 }
 
 .tdn, header nav ul a,
-footer nav ul a, header .bottom .tel a, footer .bottom .mail_link, .arhive .item a {
+footer nav ul a, header .bottom .tel a, footer .bottom .mail_link, .arhive .item a, .lastnews .item .desc h3 a, .lastnews .item .desc .more a {
   text-decoration: none;
 }
 
 .tdn:hover, header nav ul a:hover,
-footer nav ul a:hover, header .bottom .tel a:hover, footer .bottom .mail_link:hover, .arhive .item a:hover {
+footer nav ul a:hover, header .bottom .tel a:hover, footer .bottom .mail_link:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover, .lastnews .item .desc .more a:hover {
   text-decoration: underline;
 }
 
@@ -311,7 +312,7 @@ footer nav ul a:hover, header .bottom .tel a:hover, footer .bottom .mail_link:ho
   text-align: center;
 }
 
-.before {
+.before, .lastnews .item .desc h3:after {
   content: "";
   display: block;
   position: absolute;
@@ -538,6 +539,18 @@ section h1 {
   text-align: center;
 }
 
+.share {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #808080;
+  font-family: "SegoeUIItalic";
+  padding-bottom: 3.8rem;
+}
+
+.share p {
+  padding-bottom: 2rem;
+}
+
 /* =footer
 ---------------------------*/
 footer {
@@ -590,6 +603,8 @@ footer .bottom .social_icons a:hover {
   opacity: .8;
 }
 
+/* =/footer
+---------------------------*/
 section {
   margin: 3.5rem 0;
 }
@@ -837,6 +852,86 @@ section h1 {
 }
 
 /* =/arhive
+---------------------------*/
+/* =lastnews
+---------------------------*/
+.lastnews_items {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 31rem;
+}
+
+.lastnews .item {
+  position: relative;
+  text-align: center;
+  width: 32%;
+  max-width: 350px;
+}
+
+.lastnews .item .pic {
+  height: 310px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.lastnews .item .pic img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+.lastnews .item .desc h3 {
+  height: 160px;
+  position: relative;
+  font-size: 24px;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.lastnews .item .desc h3 a {
+  position: absolute;
+  bottom: 20px;
+  color: #ffc72a;
+  width: 100%;
+  left: 0;
+  display: block;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.lastnews .item .desc h3:after {
+  border-top: 3px solid #ffc72a;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 0;
+}
+
+.lastnews .item .desc .more {
+  position: absolute;
+  bottom: 2.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.lastnews .item .desc .more a {
+  color: #fff;
+  font-family: "SegoeUIItalic";
+}
+
+.lastnews .item .text {
+  color: #fff;
+  padding: 2rem 1.5rem 0;
+}
+
+/* =lastnews
 ---------------------------*/
 ::-ms-clear {
   display: none;
