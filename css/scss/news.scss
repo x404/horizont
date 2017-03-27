@@ -1,0 +1,15 @@
+.news_list{
+	h1{
+		margin-bottom: 3rem;		
+	}
+	&_items{
+		flex-wrap: wrap;
+		@include justify-content(flex-start);
+		.item{
+			margin-right: 6rem;
+			&:nth-child(3n){
+				margin-right: 0;
+			}
+		}
+	}	
+}

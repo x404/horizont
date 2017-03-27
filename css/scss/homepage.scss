@@ -1,0 +1,314 @@
+section{
+	margin: 3.5rem 0; 
+	h1{
+		margin-bottom: 2rem;
+	}
+
+}
+
+.about{
+	p{
+		margin: 2rem 0;
+	}
+}
+
+
+/* =slider
+---------------------------*/
+.homecarousel{
+	margin-top: 3rem;
+	.item{
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.container{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -585px;
+			padding-top: 6.5rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.description{
+			@include font-size(1.2);
+			color: $color2;
+			background-color: rgba(5, 99, 191, .9);
+			line-height: 2;
+			padding: 2rem;
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.title{
+			@include font-size(2.4);
+			background-color: $color9;
+			color: $color5;
+			margin-top: 7%;
+			display: inline-block;
+			padding: 1rem 12rem;
+			line-height: 1;
+		}
+
+		.more{ 
+			@extend .bold;
+			margin-top: 10%;
+			&:before{
+				content: "";
+				display: block;
+				width: 100%;
+			}
+			a{
+				@include font-size(1.5);
+				background-color: $color9;
+				color: $color5;
+				padding: 1rem 5.2rem;
+				text-decoration: none;
+				transition: background-color color;
+				&:hover{
+					color: $color2;
+					background-color: $color5;					
+				}
+			}
+		}
+	}
+
+	.owl{
+		&-dots{
+			@include justify-content(center);
+			bottom: 2.8rem;
+			display: flex;
+			position: absolute;
+			width: 100%;
+			.owl-dot{
+				border: 3px solid $color2;
+				height: 15px;
+				margin: 0 8px;
+				width: 15px;
+				@include rounded(50%);
+				&.active{
+					background: $color2;
+				}
+			}
+		}
+		&-nav{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -585px;
+
+			width: 1170px;
+
+			top: 50%;
+			.owl-{
+				&prev,
+				&next{
+					background: url(../images/prevnext.png) no-repeat left top;
+					width: 28px;
+					height: 43px;
+					position: absolute;
+					&.disabled{
+						opacity: .6;
+					}
+				}
+
+				&next{
+					right: 0;
+					@include rotation(180deg);
+
+				}
+			}
+		}
+	}
+
+
+}
+/* =slider
+---------------------------*/
+
+
+
+/* =members
+---------------------------*/
+.members,
+.arhive{
+	&_items{
+		flex-wrap: wrap;
+	}
+	.item{
+		margin-right: 3.6rem;
+		margin-bottom: 2rem;
+		width: 205px;	
+		&:nth-child(5){
+			margin-right: 0;
+		}
+	}
+}
+
+
+.members{
+	&_items{		
+		.item{
+			a{
+				display: block;
+				text-decoration: none;
+				&:hover{
+					@include drop-shadow(0, 0, 20px, .5);
+					.pic{
+						opacity: .7;
+					}
+					.title{
+						text-decoration: underline;
+					}
+				}
+			}
+			.pic{
+				@include transition;
+				width: 205px;
+				height: 205px;
+				img{
+					vertical-align: top;
+				}
+			}
+			.desc{
+				background-color: $color7;
+				padding: 2rem 1.5rem 1.5rem 1.6rem;
+				height: 12.5rem;
+				p{
+					&.title{
+						@include font-size(2.4);
+						color: $color1;
+						line-height: 1;
+					}
+					&:not(.title){
+						@include font-size(1.8);
+						color: $color8;
+						margin-top: .8rem;
+					}
+				}
+			}
+		}
+	}
+}
+/* =/members
+---------------------------*/
+
+
+/* =arhive
+---------------------------*/
+.arhive{
+	.item{	
+		a{
+			@extend .tdn;
+			@include flexbox;
+			@include align-items(center);
+			@include font-size(1.8);
+			color: $color2;
+			height: 205px;
+			// padding: 0 1.5rem; 
+			position: relative;
+			text-align: center;
+			&:hover{
+				@include drop-shadow(0, 0, 20px, .5);
+				img{
+					opacity: .85;
+				}
+			}
+		}
+		img{
+			position: absolute;
+			z-index: -1;
+			@include transition-param(opacity);
+		}
+		span{
+			padding: 0 1.5rem;
+		}
+	}
+}
+/* =/arhive
+---------------------------*/
+
+
+
+/* =lastnews
+---------------------------*/
+.lastnews,
+.news_list{
+	&_items{
+		@include justify-content(space-between);
+		min-height: 31rem;
+	}
+	.item{
+		max-width: 350px;
+		margin-bottom: 3.5rem;
+		overflow: hidden;
+		min-height: 310px;
+		position: relative;
+		text-align: center;
+		width: 32%;
+		.pic{
+			height: 310px;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			img{
+				vertical-align: top;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		.desc{
+			h3{
+				height: 160px;
+				position: relative;
+				@include font-size(2.4);
+				$color: $color9;
+				text-transform: uppercase;
+				a{
+					position: absolute;
+					bottom: 20px;
+					color: $color;
+					width: 100%;
+					left: 0;
+					display: block;
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+					@extend .tdn;
+				}
+				position: relative;
+				&:after{
+					@extend .before;
+					border-top: 3px solid $color;
+					width: 100px;
+					left: 50%;
+					margin-left: -50px;
+					bottom: 0;
+				}
+			}
+			.more{
+				position: absolute;
+				bottom: 2.5rem;
+				width: 100%;
+				text-align: center;
+				a{
+					color: $color2;
+					font-family: "SegoeUIItalic";
+					@extend .tdn;
+				}
+			}
+			
+		}
+
+		.text{
+			color: $color2;
+			padding: 2rem 1.5rem 0;
+		}
+	}
+}
+/* =lastnews
+---------------------------*/

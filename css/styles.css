@@ -601,9 +601,10 @@ section h1 {
 }
 
 h1 {
+  font-weight: normal;
   margin-bottom: 3rem;
-  text-align: center;
   padding-bottom: .8rem;
+  text-align: center;
   text-transform: uppercase;
 }
 
