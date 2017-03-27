@@ -291,12 +291,12 @@ i, em {
 }
 
 .tdn, header nav ul a,
-footer nav ul a, header .bottom .tel a, footer .bottom .mail_link, .arhive .item a, .lastnews .item .desc h3 a, .lastnews .item .desc .more a {
+footer nav ul a, header .bottom .tel a, .breadcrumbs ul li a, footer .bottom .mail_link, .arhive .item a, .lastnews .item .desc h3 a, .lastnews .item .desc .more a {
   text-decoration: none;
 }
 
 .tdn:hover, header nav ul a:hover,
-footer nav ul a:hover, header .bottom .tel a:hover, footer .bottom .mail_link:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover, .lastnews .item .desc .more a:hover {
+footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, footer .bottom .mail_link:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover, .lastnews .item .desc .more a:hover {
   text-decoration: underline;
 }
 
@@ -312,7 +312,7 @@ footer nav ul a:hover, header .bottom .tel a:hover, footer .bottom .mail_link:ho
   text-align: center;
 }
 
-.before, .lastnews .item .desc h3:after {
+.before, .line:after, main:after, main h1:after, .lastnews .item .desc h3:after {
   content: "";
   display: block;
   position: absolute;
@@ -402,6 +402,13 @@ footer nav ul {
 header nav ul a,
 footer nav ul a {
   color: #000;
+}
+
+header nav ul .active a, header nav ul .active span,
+footer nav ul .active a,
+footer nav ul .active span {
+  text-decoration: underline;
+  color: #0563bf;
 }
 
 header .tel a,
@@ -551,6 +558,62 @@ section h1 {
   padding-bottom: 2rem;
 }
 
+/* =breadcrumbs
+---------------------------*/
+.breadcrumbs {
+  font-family: "SegoeUIItalic";
+  margin-top: 5.5rem;
+  margin-bottom: 2.5rem;
+  text-transform: lowercase;
+}
+
+.breadcrumbs ul li {
+  display: inline-block;
+}
+
+.breadcrumbs ul li span {
+  color: #0563bf;
+}
+
+.breadcrumbs ul li a {
+  color: #000;
+}
+
+/* =/breadcrumbs
+---------------------------*/
+/* =main
+---------------------------*/
+.line, main, main h1 {
+  position: relative;
+}
+
+.line:after, main:after, main h1:after {
+  border-bottom: 1px solid #d5d5d5;
+  left: 50%;
+  width: 50%;
+  margin-left: -25%;
+  bottom: 0;
+}
+
+main {
+  margin-top: 2.5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 3.6rem;
+}
+
+main h1 {
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: .8rem;
+  text-align: center;
+}
+
+main p {
+  margin: 1.5rem 0;
+}
+
+/* =/main
+---------------------------*/
 /* =footer
 ---------------------------*/
 footer {
