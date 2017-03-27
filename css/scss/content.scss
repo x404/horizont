@@ -1,0 +1,67 @@
+main{
+	margin-top: 2.5rem;	
+	padding-bottom: 2rem;
+	margin-bottom: 3.6rem;
+	@extend .line;
+	p{
+		margin: 1.5rem 0;
+	}
+	h2, h3, h4, h5, h6{
+		font-weight: normal;
+		margin: 1.5rem 0;
+	}
+
+	h2{
+		@include font-size(2.2)
+	}
+	h3{
+		@include font-size(2)
+	}
+	h4{
+		@include font-size(1.8)
+	}
+	h5{
+		@include font-size(1.6)
+	}
+	h6{
+		@include font-size(1.4)
+	}
+
+	table{
+		border-collapse: collapse;
+		tr{
+			td{
+				border: 1px solid $color4;
+				padding: .7rem;
+			}
+		}
+	}
+}
+
+
+.partners{
+	@extend .line;
+	margin-top: 6rem;
+	margin-bottom: 5rem;
+	padding-bottom: 3rem;
+	@include font-size(1.8);
+	a{
+		@extend .tdn;
+	}
+
+	.owl-dots{
+		margin-top: 3rem;
+		.owl-dot{
+			@include rounded(50%);
+			background-color: $color2;
+			display: inline-block;
+			height: 12px;
+			margin: 0 5px;
+			width: 12px;
+			border: 2px solid $color4;
+			&.active{
+				background-color: $color4;
+			}
+		}
+	}
+}

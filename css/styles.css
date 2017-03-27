@@ -291,16 +291,16 @@ i, em {
 }
 
 .tdn, header nav ul a,
-footer nav ul a, header .bottom .tel a, .breadcrumbs ul li a, .pagination a, footer .bottom .mail_link, .arhive .item a, .lastnews .item .desc h3 a,
+footer nav ul a, header .bottom .tel a, .breadcrumbs ul li a, .pagination a, footer .bottom .mail_link, .navnews a, .arhive .item a, .lastnews .item .desc h3 a,
 .news_list .item .desc h3 a, .lastnews .item .desc .more a,
-.news_list .item .desc .more a {
+.news_list .item .desc .more a, .partners a {
   text-decoration: none;
 }
 
 .tdn:hover, header nav ul a:hover,
-footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, .pagination a:hover, footer .bottom .mail_link:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover,
+footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, .pagination a:hover, footer .bottom .mail_link:hover, .navnews a:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover,
 .news_list .item .desc h3 a:hover, .lastnews .item .desc .more a:hover,
-.news_list .item .desc .more a:hover {
+.news_list .item .desc .more a:hover, .partners a:hover {
   text-decoration: underline;
 }
 
@@ -316,7 +316,7 @@ footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, 
   text-align: center;
 }
 
-.before, .line:after, h1:after, main:after, .pagination:after, .lastnews .item .desc h3:after,
+.before, .line:after, h1:after, .pagination:after, main:after, .partners:after, .lastnews .item .desc h3:after,
 .news_list .item .desc h3:after {
   content: "";
   display: block;
@@ -588,11 +588,11 @@ section h1 {
 ---------------------------*/
 /* =main
 ---------------------------*/
-.line, h1, main, .pagination {
+.line, h1, .pagination, main, .partners {
   position: relative;
 }
 
-.line:after, h1:after, main:after, .pagination:after {
+.line:after, h1:after, .pagination:after, main:after, .partners:after {
   border-bottom: 1px solid #d5d5d5;
   left: 50%;
   width: 50%;
@@ -606,16 +606,6 @@ h1 {
   padding-bottom: .8rem;
   text-align: center;
   text-transform: uppercase;
-}
-
-main {
-  margin-top: 2.5rem;
-  padding-bottom: 5rem;
-  margin-bottom: 3.6rem;
-}
-
-main p {
-  margin: 1.5rem 0;
 }
 
 /* =/main
@@ -707,6 +697,51 @@ footer .bottom .social_icons a:hover {
 
 /* =/footer
 ---------------------------*/
+.justifyleft {
+  text-align: left !important;
+}
+
+.justifyright {
+  text-align: right !important;
+}
+
+.justifycenter {
+  text-align: center !important;
+}
+
+.justifyfull {
+  text-align: justify !important;
+}
+
+img.justifyleft, table.justifyleft {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+img.justifyright, table.justifyright {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+img.justifycenter, table.justifycenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navnews {
+  font-family: "SegoeUIItalic";
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: -2rem;
+}
+
+.navnews a {
+  margin: 0 1rem;
+}
+
 section {
   margin: 3.5rem 0;
 }
@@ -1067,6 +1102,82 @@ section h1 {
 
 .news_list_items .item:nth-child(3n) {
   margin-right: 0;
+}
+
+main {
+  margin-top: 2.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 3.6rem;
+}
+
+main p {
+  margin: 1.5rem 0;
+}
+
+main h2, main h3, main h4, main h5, main h6 {
+  font-weight: normal;
+  margin: 1.5rem 0;
+}
+
+main h2 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+main h3 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+main h4 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+main h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+main h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+main table {
+  border-collapse: collapse;
+}
+
+main table tr td {
+  border: 1px solid #d5d5d5;
+  padding: .7rem;
+}
+
+.partners {
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.partners .owl-dots {
+  margin-top: 3rem;
+}
+
+.partners .owl-dots .owl-dot {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  display: inline-block;
+  height: 12px;
+  margin: 0 5px;
+  width: 12px;
+  border: 2px solid #d5d5d5;
+}
+
+.partners .owl-dots .owl-dot.active {
+  background-color: #d5d5d5;
 }
 
 ::-ms-clear {

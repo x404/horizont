@@ -12,6 +12,18 @@ $(document).ready(function(){
 		navText: ["", ""]
 	});
 
+	$('#foo2').owlCarousel({
+		loop:false,
+		nav:false,
+		dots: true,
+		items:5,
+		autoplay : false,
+		animateOut: 'fadeOut',
+		autoplayTimeout : 6000,
+		navText: ["", ""]
+	});
+
+
 });
 
 // =заглушка для IE
