@@ -141,7 +141,7 @@ section{
 		margin-right: 3.6rem;
 		margin-bottom: 2rem;
 		width: 205px;	
-		&:nth-child(5){
+		&:nth-child(5n){
 			margin-right: 0;
 		}
 	}
@@ -151,6 +151,8 @@ section{
 .members{
 	&_items{		
 		.item{
+			width: 220px;
+			margin-right: 1.7rem;
 			a{
 				display: block;
 				text-decoration: none;
@@ -166,10 +168,11 @@ section{
 			}
 			.pic{
 				@include transition;
-				width: 205px;
+				width: 220px;
 				height: 205px;
 				img{
 					vertical-align: top;
+					width: 100%;
 				}
 			}
 			.desc{
@@ -189,6 +192,12 @@ section{
 					}
 				}
 			}
+		}
+	}
+
+	&_inner{
+		.members_items{
+			margin-top: 4rem;			
 		}
 	}
 }

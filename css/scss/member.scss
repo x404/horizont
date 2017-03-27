@@ -1,0 +1,24 @@
+.content{
+	.post{
+		@extend .bold;
+	}
+}
+
+.gallery{
+	@include justify-content(space-between);
+	margin-bottom: 2.5rem;
+	a{
+		overflow: hidden;
+		display: block;
+		img{
+			// @include transition-param(transform);
+			transition: 0.4s transform;
+		}
+		&:hover{
+			opacity: .8;
+			img{
+				transform: scale(1.2);
+			}
+		}
+	}
+}
