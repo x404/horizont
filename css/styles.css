@@ -291,12 +291,16 @@ i, em {
 }
 
 .tdn, header nav ul a,
-footer nav ul a, header .bottom .tel a, .breadcrumbs ul li a, footer .bottom .mail_link, .arhive .item a, .lastnews .item .desc h3 a, .lastnews .item .desc .more a {
+footer nav ul a, header .bottom .tel a, .breadcrumbs ul li a, .pagination a, footer .bottom .mail_link, .arhive .item a, .lastnews .item .desc h3 a,
+.news_list .item .desc h3 a, .lastnews .item .desc .more a,
+.news_list .item .desc .more a {
   text-decoration: none;
 }
 
 .tdn:hover, header nav ul a:hover,
-footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, footer .bottom .mail_link:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover, .lastnews .item .desc .more a:hover {
+footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, .pagination a:hover, footer .bottom .mail_link:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover,
+.news_list .item .desc h3 a:hover, .lastnews .item .desc .more a:hover,
+.news_list .item .desc .more a:hover {
   text-decoration: underline;
 }
 
@@ -312,7 +316,8 @@ footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, 
   text-align: center;
 }
 
-.before, .line:after, main:after, main h1:after, .lastnews .item .desc h3:after {
+.before, .line:after, h1:after, main:after, .pagination:after, .lastnews .item .desc h3:after,
+.news_list .item .desc h3:after {
   content: "";
   display: block;
   position: absolute;
@@ -583,16 +588,23 @@ section h1 {
 ---------------------------*/
 /* =main
 ---------------------------*/
-.line, main, main h1 {
+.line, h1, main, .pagination {
   position: relative;
 }
 
-.line:after, main:after, main h1:after {
+.line:after, h1:after, main:after, .pagination:after {
   border-bottom: 1px solid #d5d5d5;
   left: 50%;
   width: 50%;
   margin-left: -25%;
   bottom: 0;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding-bottom: .8rem;
+  text-transform: uppercase;
 }
 
 main {
@@ -601,18 +613,44 @@ main {
   margin-bottom: 3.6rem;
 }
 
-main h1 {
-  margin-bottom: 3rem;
-  position: relative;
-  padding-bottom: .8rem;
-  text-align: center;
-}
-
 main p {
   margin: 1.5rem 0;
 }
 
 /* =/main
+---------------------------*/
+/* =pagination
+---------------------------*/
+.pagination {
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.pagination:after {
+  top: 0;
+  bottom: initial;
+}
+
+.pagination a, .pagination span {
+  margin-left: .4rem;
+  margin-right: .4rem;
+}
+
+.pagination a:hover {
+  color: #0563bf;
+}
+
+.pagination a.active {
+  color: #0563bf;
+}
+
+.pagination ul li {
+  display: inline-block;
+}
+
+/* =/pagination
 ---------------------------*/
 /* =footer
 ---------------------------*/
@@ -918,7 +956,8 @@ section h1 {
 ---------------------------*/
 /* =lastnews
 ---------------------------*/
-.lastnews_items {
+.lastnews_items,
+.news_list_items {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
@@ -927,14 +966,19 @@ section h1 {
   min-height: 31rem;
 }
 
-.lastnews .item {
+.lastnews .item,
+.news_list .item {
+  max-width: 350px;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+  min-height: 310px;
   position: relative;
   text-align: center;
   width: 32%;
-  max-width: 350px;
 }
 
-.lastnews .item .pic {
+.lastnews .item .pic,
+.news_list .item .pic {
   height: 310px;
   overflow: hidden;
   position: absolute;
@@ -943,13 +987,15 @@ section h1 {
   z-index: -1;
 }
 
-.lastnews .item .pic img {
+.lastnews .item .pic img,
+.news_list .item .pic img {
   vertical-align: top;
   max-width: 100%;
   height: auto;
 }
 
-.lastnews .item .desc h3 {
+.lastnews .item .desc h3,
+.news_list .item .desc h3 {
   height: 160px;
   position: relative;
   font-size: 24px;
@@ -958,7 +1004,8 @@ section h1 {
   position: relative;
 }
 
-.lastnews .item .desc h3 a {
+.lastnews .item .desc h3 a,
+.news_list .item .desc h3 a {
   position: absolute;
   bottom: 20px;
   color: #ffc72a;
@@ -969,7 +1016,8 @@ section h1 {
   padding-right: 1.5rem;
 }
 
-.lastnews .item .desc h3:after {
+.lastnews .item .desc h3:after,
+.news_list .item .desc h3:after {
   border-top: 3px solid #ffc72a;
   width: 100px;
   left: 50%;
@@ -977,25 +1025,49 @@ section h1 {
   bottom: 0;
 }
 
-.lastnews .item .desc .more {
+.lastnews .item .desc .more,
+.news_list .item .desc .more {
   position: absolute;
   bottom: 2.5rem;
   width: 100%;
   text-align: center;
 }
 
-.lastnews .item .desc .more a {
+.lastnews .item .desc .more a,
+.news_list .item .desc .more a {
   color: #fff;
   font-family: "SegoeUIItalic";
 }
 
-.lastnews .item .text {
+.lastnews .item .text,
+.news_list .item .text {
   color: #fff;
   padding: 2rem 1.5rem 0;
 }
 
 /* =lastnews
 ---------------------------*/
+.news_list h1 {
+  margin-bottom: 3rem;
+}
+
+.news_list_items {
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.news_list_items .item {
+  margin-right: 6rem;
+}
+
+.news_list_items .item:nth-child(3n) {
+  margin-right: 0;
+}
+
 ::-ms-clear {
   display: none;
 }

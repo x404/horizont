@@ -51,19 +51,19 @@
 				<nav>
 					<ul class="nav_left">
 						<li>
-							<a href="#" title="">Архив походов</a>
+							<a href="arhive.html" title="">Архив походов</a>
 						</li>
 						<li>
-							<a href="#" title="">Члены клуба</a>
+							<a href="members.html" title="">Члены клуба</a>
 						</li>
 						<li>
-							<a href="#" title="">Тренировки</a>
+							<a href="training.html" title="">Тренировки</a>
 						</li>
 					</ul>
 					<ul class="nav_right">
-						<li><a href="#" title="">О нас</a></li>
-						<li><a href="#" title="">Новости</a></li>
-						<li><a href="#" title="">Контакты</a></li>
+						<li><a href="about.html" title="">О нас</a></li>
+						<li><a href="news.html" title="">Новости</a></li>
+						<li><a href="contacts.html" title="">Контакты</a></li>
 					</ul>
 				</nav>
 			</div>
