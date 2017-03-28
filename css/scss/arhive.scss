@@ -1,0 +1,50 @@
+.arhive_list{
+	h1{
+		margin-bottom: 3rem;
+	}
+	&_items{
+		flex-wrap: wrap;
+		@include justify-content(space-between);
+		.item{
+			background-color: $color7;
+			margin-bottom: 4.5rem;
+			width: 43rem;
+			&:nth-child(odd){
+				margin-right: 250px;
+				position: relative;
+				&:after{
+					@extend .before;
+					border-top: 1px solid $color4;
+					width: 205px;
+					left: 110%;
+					top: 100px;
+				}
+			}
+			a{
+				@include flexbox;
+				color: $color1;
+				text-decoration: none;
+				&:hover{
+					@include drop-shadow(0, 0, 15px, .7);
+					h3{
+						text-decoration: underline;
+					}
+					img{
+						opacity: .7;
+					}
+				}				
+			}
+			img{
+				vertical-align: top;
+				@include transition-param(opacity);
+			}
+			h3{
+				color: $color1;
+				padding-bottom: 1rem;				
+			}
+			.description{
+				padding: 1rem 1rem 0 1.5rem;
+			}
+		}
+	}	
+}
