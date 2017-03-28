@@ -317,7 +317,7 @@ footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, 
 }
 
 .before, .line:after, h1:after, .pagination:after, main:after, .partners:after, .lastnews .item .desc h3:after,
-.news_list .item .desc h3:after, .arhive_list_items .item:nth-child(odd):after {
+.news_list .item .desc h3:after, .gallery-item a:before, .arhive_list_items .item:nth-child(odd):after {
   content: "";
   display: block;
   position: absolute;
@@ -1196,6 +1196,7 @@ main table tr td {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 2.5rem;
 }
 
@@ -1206,6 +1207,7 @@ main table tr td {
 
 .gallery a img {
   transition: 0.4s transform;
+  vertical-align: top;
 }
 
 .gallery a:hover {
@@ -1214,6 +1216,47 @@ main table tr td {
 
 .gallery a:hover img {
   transform: scale(1.2);
+}
+
+.gallery-item a {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  margin: 2px;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  z-index: 1;
+  height: 200px;
+}
+
+.gallery-item a img {
+  -webkit-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  height: 250px;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-item a:before {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: url(../images/zoom.png) no-repeat center center;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.gallery-item a:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item a:hover:before {
+  opacity: 1;
+  background-color: rgba(48, 68, 93, 0.25);
 }
 
 .arhive_list h1 {

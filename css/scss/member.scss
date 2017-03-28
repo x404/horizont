@@ -6,6 +6,7 @@
 
 .gallery{
 	@include justify-content(space-between);
+	flex-wrap: wrap;
 	margin-bottom: 2.5rem;
 	a{
 		overflow: hidden;
@@ -13,11 +14,55 @@
 		img{
 			// @include transition-param(transform);
 			transition: 0.4s transform;
+			vertical-align: top;
 		}
 		&:hover{
 			opacity: .8;
 			img{
 				transform: scale(1.2);
+			}
+		}
+	}
+
+	&-item{
+		a{
+			-webkit-box-flex: auto;
+			-ms-flex: auto;
+			flex: auto; 
+			margin: 2px; 
+			overflow: hidden;
+			position: relative;
+			width: 200px; 
+			// width: 300px; 
+			z-index: 1;
+
+			height: 200px;
+			img{
+				@include transition-param(transform);
+				// height: 100%; 
+				height: 250px;
+				vertical-align: top;
+				width: 100%; 
+			}
+			&:before{
+				@extend .before;
+				@include transition;
+				background: url(../images/zoom.png) no-repeat center center;
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				top: 0;
+				width: 100%;
+				z-index: 10;
+			}
+			&:hover{
+				img{
+					transform: scale(1.1);
+				}
+				&:before{
+					opacity: 1;
+					background-color: rgba(48, 68, 93, .25);
+				}
 			}
 		}
 	}
