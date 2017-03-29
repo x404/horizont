@@ -56,6 +56,8 @@ $(document).ready(function(){
 		init();
 	});	
 
+	$('#feedback-form').validate()
+
 
 	// $('#navbar').hammer().on('panleft', function(){
 	// 	$('body').removeClass('o-menu');

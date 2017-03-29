@@ -137,6 +137,9 @@ html {
 input,
 textarea {
   font-family: "SegoeUIRegular";
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-style: italic;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -154,6 +157,25 @@ input:focus::-moz-placeholder {
 
 /* FF 19+ */
 input:focus:-ms-input-placeholder {
+  color: transparent !important;
+}
+
+/* IE 10+ */
+textarea:focus::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent !important;
+}
+
+/* FF 4-18 */
+textarea:focus::-moz-placeholder {
+  color: transparent !important;
+}
+
+/* FF 19+ */
+textarea:focus:-ms-textarea-placeholder {
   color: transparent !important;
 }
 
@@ -251,7 +273,7 @@ input::-moz-focus-inner {
   font-weight: normal;
 }
 
-.bold, h1, .logo a .title, .homecarousel .item .more, .content .post {
+.bold, h1, .logo a .title, .homecarousel .item .more, .content .post, .contact_page h2 {
   font-family: "SegoeUIBold";
 }
 
@@ -297,14 +319,14 @@ i, em {
 .tdn, header nav ul a,
 footer nav ul a, header .bottom .tel a, .breadcrumbs ul li a, .pagination a, footer .bottom .mail_link, .navnews a, .arhive .item a, .lastnews .item .desc h3 a,
 .news_list .item .desc h3 a, .lastnews .item .desc .more a,
-.news_list .item .desc .more a, .partners a {
+.news_list .item .desc .more a, .partners a, #map .box .vcard .email {
   text-decoration: none;
 }
 
 .tdn:hover, header nav ul a:hover,
 footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, .pagination a:hover, footer .bottom .mail_link:hover, .navnews a:hover, .arhive .item a:hover, .lastnews .item .desc h3 a:hover,
 .news_list .item .desc h3 a:hover, .lastnews .item .desc .more a:hover,
-.news_list .item .desc .more a:hover, .partners a:hover {
+.news_list .item .desc .more a:hover, .partners a:hover, #map .box .vcard .email:hover {
   text-decoration: underline;
 }
 
@@ -332,11 +354,6 @@ footer nav ul a:hover, header .bottom .tel a:hover, .breadcrumbs ul li a:hover, 
   border-radius: 0;
   margin-top: 0.6rem;
   font-size: 16px;
-}
-
-.form-control:focus, .form-control:active {
-  border-color: #0563bf;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(222, 72, 111, 0.3);
 }
 
 .logo {
@@ -512,17 +529,14 @@ header .bottom .search #search:-ms-input-placeholder {
 }
 
 header .bottom .search #search:focus::-webkit-input-placeholder {
-  line-height: 100px;
   transition: line-height 0.5s ease;
 }
 
 header .bottom .search #search:focus::-moz-placeholder {
-  line-height: 100px;
   transition: line-height 0.5s ease;
 }
 
 header .bottom .search #search:focus:-ms-input-placeholder {
-  line-height: 100px;
   transition: line-height 0.5s ease;
 }
 
@@ -752,6 +766,14 @@ img.justifycenter, table.justifycenter {
 
 .navnews a {
   margin: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+label.error {
+  display: none !important;
 }
 
 section {
@@ -1342,6 +1364,157 @@ main table tr td {
   padding: 1rem 1rem 0 1.5rem;
 }
 
+.contact_page h2 {
+  text-align: center;
+}
+
+#map {
+  position: relative;
+  text-align: center;
+}
+
+#map .box {
+  background-color: rgba(255, 255, 255, 0.85);
+  left: 50%;
+  margin-left: -370px;
+  position: absolute;
+  top: 0;
+  width: 785px;
+}
+
+#map .box .vcard {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+#map .box .vcard .name {
+  font-size: 17px;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+#map .box .vcard .tel {
+  text-decoration: none;
+  margin-right: .5rem;
+}
+
+#map .box .vcard .email {
+  margin-left: .5rem;
+}
+
+#map .box .feedback {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+#map .box .feedback .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+#map .box .feedback .row input.form-control,
+#map .box .feedback .row textarea {
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+#map .box .feedback .row input.form-control {
+  height: 3rem;
+  width: 245px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#map .box .feedback .row input.form-control::-webkit-input-placeholder {
+  color: #000;
+}
+
+#map .box .feedback .row input.form-control::-moz-placeholder {
+  color: #000;
+}
+
+#map .box .feedback .row input.form-control:-ms-input-placeholder {
+  color: #000;
+}
+
+#map .box .feedback .row input.form-control:focus::-webkit-input-placeholder {
+  transition: line-height 0.5s ease;
+}
+
+#map .box .feedback .row input.form-control:focus::-moz-placeholder {
+  transition: line-height 0.5s ease;
+}
+
+#map .box .feedback .row input.form-control:focus:-ms-input-placeholder {
+  transition: line-height 0.5s ease;
+}
+
+#map .box .feedback .row textarea {
+  flex: 1;
+  overflow: hidden;
+  height: 7rem;
+}
+
+#map .box .feedback .row textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+#map .box .feedback .row textarea::-moz-placeholder {
+  color: #000;
+}
+
+#map .box .feedback .row textarea:-ms-input-placeholder {
+  color: #000;
+}
+
+#map .box .feedback .row textarea:focus::-webkit-input-placeholder {
+  transition: line-height 0.5s ease;
+}
+
+#map .box .feedback .row textarea:focus::-moz-placeholder {
+  transition: line-height 0.5s ease;
+}
+
+#map .box .feedback .row textarea:focus:-ms-input-placeholder {
+  transition: line-height 0.5s ease;
+}
+
+#map .box .feedback .row .error {
+  border: 1px solid red !important;
+}
+
+#map .box .feedback .row .submit {
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  font-size: 15px;
+  font-size: 1.5rem;
+  background-color: #218ee0;
+  border: none;
+  color: #fff;
+  margin-left: 1.8rem;
+  text-decoration: none;
+  text-transform: lowercase;
+  width: 12rem;
+}
+
+#map .box .feedback .row .submit:hover {
+  background-color: #0563bf;
+}
+
 ::-ms-clear {
   display: none;
 }
@@ -1609,6 +1782,12 @@ main table tr td {
   }
   .navbar-toggle:hover {
     background-color: #333;
+  }
+}
+
+@media (max-width: 450px) {
+  .ya-share2 li {
+    margin-bottom: .5rem !important;
   }
 }
 

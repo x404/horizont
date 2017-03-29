@@ -57,9 +57,9 @@
 	&::-moz-placeholder          {color:$color;}// Firefox 19+ 
 	&:-ms-input-placeholder      {color:$color;}
 
-	&:focus::-webkit-input-placeholder {line-height: 100px; transition: line-height 0.5s ease;}
-	&:focus::-moz-placeholder          {line-height: 100px; transition: line-height 0.5s ease;}
-	&:focus:-ms-input-placeholder      {line-height: 100px; transition: line-height 0.5s ease;}	
+	&:focus::-webkit-input-placeholder {transition: line-height 0.5s ease;}
+	&:focus::-moz-placeholder          {transition: line-height 0.5s ease;}
+	&:focus:-ms-input-placeholder      {transition: line-height 0.5s ease;}	
 }
 
 

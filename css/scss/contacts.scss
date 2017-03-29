@@ -1,0 +1,87 @@
+.contact_page{
+	h2{
+		text-align: center;
+		@extend .bold;
+	}
+
+}
+#map{
+	position: relative;
+	text-align: center;
+	.box{
+		background-color: rgba(255, 255, 255, .85);
+		left: 50%;
+		margin-left: -370px;
+		position: absolute;
+		top: 0;
+		width: 785px;
+		.vcard{
+			@include font-size(1.5);
+			.name{
+				@include font-size(1.7);
+				margin-bottom: 1rem;
+				padding-top: 1rem;
+				text-transform: uppercase;
+			}
+			.tel{
+				text-decoration: none;
+				margin-right: .5rem;
+			}
+			.email{
+				margin-left: .5rem;
+				@extend .tdn;
+			}
+		}
+		.feedback{
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 1rem;
+			.row{
+				@include flexbox;
+				@include justify-content(space-between);
+				margin-bottom: 1rem;
+				input.form-control,
+				textarea{
+					background-color: $color7;
+					border: 1px solid $color7;
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
+
+
+				input.form-control{
+					height: 3rem;
+					width: 245px;
+					@include font-size(1.4);
+					@include placeholder($color1);
+				}
+
+				textarea{
+					flex: 1;
+					overflow: hidden;
+					height: 7rem;
+					@include placeholder($color1);
+				}
+
+				.error{
+					border: 1px solid red !important
+				}
+
+				.submit{
+					@include transition-param(background-color);
+					@include font-size(1.5);
+					background-color: $color10;
+					border: none;
+					color: $color2;
+					margin-left: 1.8rem;
+					text-decoration: none;
+					text-transform: lowercase;
+					width: 12rem;
+					&:hover{
+						background-color: $color5;
+					}
+				}
+			}
+		}
+	}
+}
