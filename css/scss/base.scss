@@ -150,6 +150,10 @@ i, em{
 	cursor: pointer;
 }
 
+.navbar-toggle{
+	display: none;
+}
+
 
 /* font-family: "SegoeUIItalic"; */
 @font-face {
@@ -294,11 +298,21 @@ footer{
 
 header{
 	padding-top: 1.5rem;
+	.close-menu{
+		display: none;
+	}
+
 	.container{
 		position: relative;
 	}
 	ul{
 		margin-top: 3rem;
+	}
+
+	.top{
+		.tel{
+			display: none;
+		}
 	}
 	.bottom{
 		@include justify-content(space-between);
