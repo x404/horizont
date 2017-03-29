@@ -273,7 +273,7 @@ input::-moz-focus-inner {
   font-weight: normal;
 }
 
-.bold, h1, .logo a .title, .homecarousel .item .more, .content .post, .contact_page h2 {
+.bold, h1, .logo a .title, .homecarousel .item .more, .partners h2, .content .post, .contact_page h2 {
   font-family: "SegoeUIBold";
 }
 
@@ -1207,6 +1207,12 @@ main table tr td {
   font-size: 1.8rem;
 }
 
+.partners h2 {
+  color: #0563bf;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
 .partners .owl-dots {
   margin-top: 3rem;
 }
@@ -1953,6 +1959,9 @@ main table tr td {
     margin-right: auto !important;
     min-width: 0;
     width: 350px !important;
+  }
+  main img {
+    max-width: 100%;
   }
 }
 

@@ -49,6 +49,13 @@ main{
 		@extend .tdn;
 	}
 
+	h2{
+		color: $color5;
+		text-align: center;
+		@extend .bold;
+		padding-bottom: 2rem;
+	}
+
 	.owl-dots{
 		margin-top: 3rem;
 		.owl-dot{
