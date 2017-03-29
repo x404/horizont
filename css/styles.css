@@ -1848,6 +1848,9 @@ main table tr td {
   .homecarousel .item .container {
     margin-left: -525px;
   }
+  .news_list_items .item {
+    margin-right: 2.1rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1872,6 +1875,9 @@ main table tr td {
   .homecarousel .item .container {
     margin-left: -470px;
     padding-top: 4rem;
+  }
+  .news_list_items .item {
+    margin-right: 1.8rem;
   }
 }
 
@@ -1901,6 +1907,10 @@ main table tr td {
   .lastnews .item:nth-child(3) {
     display: none;
   }
+  .news_list_items .item {
+    margin-right: 1.8rem !important;
+    width: calc(50% - 1.8rem);
+  }
 }
 
 @media (max-width: 767px) {
@@ -1927,12 +1937,22 @@ main table tr td {
     margin-left: auto;
     margin-right: auto;
   }
+  main {
+    text-align: justify;
+  }
 }
 
 @media (max-width: 650px) {
   .lastnews .item {
-    width: 100%;
     display: block !important;
+    width: 100%;
+  }
+  .news_list_items .item {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto !important;
+    min-width: 0;
+    width: 350px !important;
   }
 }
 
