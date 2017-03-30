@@ -14,9 +14,9 @@
 				&:after{
 					@extend .before;
 					border-top: 1px solid $color4;
-					width: 205px;
 					left: 110%;
 					top: 100px;
+					width: 205px;
 				}
 			}
 			a{

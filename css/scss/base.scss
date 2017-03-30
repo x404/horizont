@@ -61,7 +61,7 @@ body{
 	@include flexbox;
 	flex-flow: column;
 	font-display: swap;
-	height: 100vh;
+	min-height: 100vh;
 	color: $color3;
 	// font-size:10px;
 	// font-size: 1.4rem;
@@ -490,7 +490,7 @@ h1{
 	text-align: center;
 	&:after{
 		top: 0;
-		bottom: initial;
+		bottom: auto;
 	}
 	a, span{
 		margin-left: .4rem;

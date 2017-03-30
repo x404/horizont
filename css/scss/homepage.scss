@@ -122,8 +122,6 @@ section{
 			}
 		}
 	}
-
-
 }
 /* =slider
 ---------------------------*/
@@ -217,7 +215,6 @@ section{
 			@include font-size(1.8);
 			color: $color2;
 			height: 205px;
-			// padding: 0 1.5rem; 
 			position: relative;
 			text-align: center;
 			&:hover{
@@ -228,6 +225,8 @@ section{
 			}
 		}
 		img{
+			top: 0;
+			left: 0;
 			position: absolute;
 			z-index: -1;
 			@include transition-param(opacity);
