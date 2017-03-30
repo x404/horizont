@@ -1599,39 +1599,6 @@ main table tr td {
   }
 }
 
-@media (max-width: 680px) {
-  .homecarousel .item .container {
-    left: 5%;
-    width: 90%;
-    margin-left: 0 !important;
-  }
-  .homecarousel .item .description {
-    padding-top: 1rem;
-    height: 9rem;
-    overflow: hidden;
-  }
-  .homecarousel .item .title {
-    font-size: 20px;
-    font-size: 2rem;
-  }
-  .arhive .arhive_items {
-    display: block;
-  }
-  .arhive .arhive_items .item {
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .lastnews_items {
-    display: block;
-  }
-  .lastnews_items .item {
-    margin-left: auto;
-    margin-right: auto;
-    display: block !important;
-  }
-}
-
 @media (max-width: 650px) {
   .o-menu .header .close-menu {
     display: block;
@@ -1977,7 +1944,8 @@ main table tr td {
     margin-left: auto;
     margin-right: auto;
   }
-  main {
+  main,
+  .about {
     text-align: justify;
   }
   .members-inner .item {
@@ -1986,6 +1954,40 @@ main table tr td {
   .members-inner .item a {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .homecarousel .item .container {
+    left: 5%;
+    width: 90%;
+    margin-left: 0 !important;
+  }
+  .homecarousel .item .description {
+    padding-top: 1rem;
+    height: 9rem;
+    overflow: hidden;
+  }
+  .homecarousel .item .title {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .arhive .arhive_items .item {
+    width: 50%;
+    display: block !important;
+  }
+  .arhive .arhive_items .item a {
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lastnews_items {
+    display: block;
+  }
+  .lastnews_items .item {
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
   }
 }
 
@@ -2029,6 +2031,12 @@ main table tr td {
   .members_items .item .desc p.title {
     padding-top: 1rem;
   }
+  .arhive .arhive_items {
+    display: block;
+  }
+  .arhive .arhive_items .item {
+    width: 100%;
+  }
 }
 
 @media (max-width: 470px) {
@@ -2046,5 +2054,11 @@ main table tr td {
 @media (max-width: 450px) {
   .homecarousel {
     display: none !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .navnews a {
+    display: block;
   }
 }
