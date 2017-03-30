@@ -2026,9 +2026,12 @@ _::-webkit-:host:not(:root:root), .news_list_items .item {
     display: block !important;
   }
   .arhive .arhive_items .item a {
-    width: 205px;
+    width: 215px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .arhive .arhive_items .item a img {
+    width: 100%;
   }
   .lastnews_items {
     display: block;
@@ -2106,6 +2109,37 @@ _::-webkit-:host:not(:root:root), .news_list_items .item {
 @media (max-width: 450px) {
   .homecarousel {
     display: none !important;
+  }
+  .members_items .item .pic {
+    height: auto;
+    width: 100%;
+  }
+  .members_items .item a {
+    width: 100%;
+  }
+  .members_items .item a img {
+    width: 100%;
+  }
+  .members_items .item .desc p.title {
+    padding-top: 0;
+  }
+  .members-home .members_items .item {
+    margin-right: 0 !important;
+  }
+  .arhive .arhive_items .item img {
+    position: static;
+  }
+  .arhive .arhive_items .item a {
+    display: block;
+    height: auto;
+    width: 100%;
+    position: relative;
+  }
+  .arhive .arhive_items .item a span {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    left: 0;
   }
 }
 

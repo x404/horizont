@@ -229,11 +229,7 @@
 				width: 230px;
 			}
 		}
-		#map{
-			// height: 200px;
-		}
 	}
-
 }
 
 
@@ -253,8 +249,6 @@
 			margin-right: 0;
 		}
 	}
-
-
 }
 
 
@@ -328,16 +322,16 @@
 	}
 
 	.arhive .arhive_items{
-		// display: block;
 		.item{
 			width: 50%;
 			display: block !important;
-			// margin-left: auto !important;
-			// margin-right: auto !important;
 			a{
-				width: 205px;
+				width: 215px;
 				margin-left: auto;
 				margin-right: auto;
+				img{	
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -438,6 +432,43 @@
 @media (max-width: 450px){
 	.homecarousel{
 		display: none !important;
+	}
+
+	.members_items .item{
+		.pic{
+			height: auto;
+			width: 100%;
+		}
+		a{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		.desc p.title{
+			padding-top: 0;
+		}
+	}
+	.members-home .members_items .item{
+		margin-right: 0 !important;
+	}
+
+	.arhive .arhive_items .item{
+		img{
+			position: static;
+		}
+		a{
+			display: block;
+			height: auto;
+			width: 100%;
+			position: relative;
+			span{
+				position: absolute;
+				top: 40%;
+				width: 100%;
+				left: 0;
+			}
+		}
 	}
 }
 
