@@ -4,8 +4,12 @@
 
 
 // safari
-_::-webkit-:host:not(:root:root), .header{
+_::-webkit-:host:not(:root:root), .news_list_items .item{
+	margin-right: 2rem;
 }
+
+
+
 
 
 // edge

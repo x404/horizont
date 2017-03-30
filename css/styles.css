@@ -1525,6 +1525,10 @@ main table tr td {
   display: none;
 }
 
+_::-webkit-:host:not(:root:root), .news_list_items .item {
+  margin-right: 2rem;
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   body,
   main {

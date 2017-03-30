@@ -107,9 +107,9 @@ $(document).ready(function(){
 	$('#feedback-form').validate()
 
 
-	// $('#navbar').hammer().on('panleft', function(){
-	// 	$('body').removeClass('o-menu');
-	// });
+	$('.top').hammer().on('panleft', function(){
+		$('body').removeClass('o-menu');
+	});
 
 });
 
