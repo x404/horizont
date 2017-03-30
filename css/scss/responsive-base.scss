@@ -1,9 +1,3 @@
-@media (max-width: 1199px){
-}
-
-@media (max-width: 1024px){
-}
-
 @media (max-width: 991px){
 	header, footer{
 		.tel{
@@ -49,7 +43,6 @@
 	header{
 		.logo{
 			position: static;
-			margin-left: 0;
 			margin-left: auto;
 			margin-right: auto;
 			width: 150px;
@@ -160,7 +153,6 @@
 		cursor: pointer;
 		padding: 0;
 		left: 23rem;
-		top: 20px;
 		background-color: $color5;
 		border: none;
 		height: 70px;
@@ -209,17 +201,17 @@
 				display: block;
 				& > ul{
 					@include font-size(1.5);
-					margin-top: 0;
 					display: block;
+					margin-top: 0;
 					li{
 						border-bottom: 1px solid #fff;
 						a{
 							color: $color2;
-							text-transform: none;
-							padding-top: 1.8rem;
-							padding-bottom: 1.8rem;
-							padding: 1.8rem 0 1.8rem 2rem;
 							display: block;
+							padding-bottom: 1.8rem;
+							padding-top: 1.8rem;
+							padding: 1.8rem 0 1.8rem 2rem;
+							text-transform: none;
 							&:hover{
 								color: $color2;
 								text-decoration: underline;
@@ -318,7 +310,3 @@
 		margin-bottom: .5rem !important;
 	}
 }
-
-
-
-

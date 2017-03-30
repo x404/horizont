@@ -1320,7 +1320,6 @@ main table tr td {
 }
 
 .arhive_list_items .item:nth-child(odd) {
-  margin-right: 250px;
   position: relative;
 }
 
@@ -1559,7 +1558,6 @@ main table tr td {
 @media (max-width: 767px) {
   header .logo {
     position: static;
-    margin-left: 0;
     margin-left: auto;
     margin-right: auto;
     width: 150px;
@@ -1653,7 +1651,6 @@ main table tr td {
     cursor: pointer;
     padding: 0;
     left: 23rem;
-    top: 20px;
     background-color: #0563bf;
     border: none;
     height: 70px;
@@ -1705,19 +1702,19 @@ main table tr td {
   header .top nav > ul {
     font-size: 15px;
     font-size: 1.5rem;
-    margin-top: 0;
     display: block;
+    margin-top: 0;
   }
   header .top nav > ul li {
     border-bottom: 1px solid #fff;
   }
   header .top nav > ul li a {
     color: #fff;
-    text-transform: none;
-    padding-top: 1.8rem;
-    padding-bottom: 1.8rem;
-    padding: 1.8rem 0 1.8rem 2rem;
     display: block;
+    padding-bottom: 1.8rem;
+    padding-top: 1.8rem;
+    padding: 1.8rem 0 1.8rem 2rem;
+    text-transform: none;
   }
   header .top nav > ul li a:hover {
     color: #fff;
@@ -1862,6 +1859,13 @@ main table tr td {
   .members-inner .item:nth-child(5n) {
     margin-right: auto;
   }
+  .arhive_list_items .item {
+    width: 43rem;
+  }
+  .arhive_list_items .item:nth-child(odd):after {
+    width: 110px;
+    left: 108%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1895,6 +1899,12 @@ main table tr td {
   }
   .gallery-member a img {
     max-width: 95%;
+  }
+  .arhive_list_items .item {
+    width: 43rem;
+  }
+  .arhive_list_items .item:nth-child(odd):after {
+    display: none;
   }
 }
 
@@ -1932,6 +1942,10 @@ main table tr td {
   }
   .members-inner .item {
     margin-right: 2.3rem;
+  }
+  .arhive_list_items .item {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2014,6 +2028,18 @@ main table tr td {
   }
   .members_items .item .desc p.title {
     padding-top: 1rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .arhive_list_items .item a {
+    display: block;
+  }
+  .arhive_list_items .item a img {
+    width: 100%;
+  }
+  .arhive_list_items .item .description {
+    padding-bottom: 2rem;
   }
 }
 

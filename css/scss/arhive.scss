@@ -10,7 +10,6 @@
 			margin-bottom: 4.5rem;
 			width: 43rem;
 			&:nth-child(odd){
-				margin-right: 250px;
 				position: relative;
 				&:after{
 					@extend .before;
