@@ -1242,22 +1242,21 @@ main table tr td {
   margin-bottom: 2.5rem;
 }
 
+.gallery-member {
+  flex-wrap: nowrap;
+}
+
 .gallery a {
   overflow: hidden;
   display: block;
 }
 
 .gallery a img {
-  transition: 0.4s transform;
   vertical-align: top;
 }
 
 .gallery a:hover {
   opacity: .8;
-}
-
-.gallery a:hover img {
-  transform: scale(1.2);
 }
 
 .gallery-item a {
@@ -1893,6 +1892,9 @@ main table tr td {
   }
   .members-inner .item {
     margin-right: 1.5rem;
+  }
+  .gallery-member a img {
+    max-width: 95%;
   }
 }
 

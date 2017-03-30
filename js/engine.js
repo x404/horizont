@@ -43,6 +43,36 @@ $(document).ready(function(){
 	});
 
 
+	$('#foo3').owlCarousel({
+		loop:false,
+		nav:false,
+		dots: true,
+		items:5,
+		autoplay : false,
+		animateOut: 'fadeOut',
+		autoplayTimeout : 6000,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 50
+			},
+			480:{
+				items:2
+			},
+			650:{
+				items:3
+			},
+			991:{
+				items:4
+			},
+			1200:{
+				items:5
+			}
+		}
+	});
+
+
 	$(window).resize(function(){
 		if ($('body').width() > 630) {
 			$('body').removeClass('o-menu');

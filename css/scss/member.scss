@@ -8,18 +8,21 @@
 	@include justify-content(space-between);
 	flex-wrap: wrap;
 	margin-bottom: 2.5rem;
+	&-member{
+		flex-wrap: nowrap;
+	}
 	a{
 		overflow: hidden;
 		display: block;
 		img{
 			// @include transition-param(transform);
-			transition: 0.4s transform;
+			// transition: 0.4s transform;
 			vertical-align: top;
 		}
 		&:hover{
 			opacity: .8;
 			img{
-				transform: scale(1.2);
+				// transform: scale(1.2);
 			}
 		}
 	}
