@@ -986,7 +986,7 @@ section h1 {
   margin-top: .8rem;
 }
 
-.members_inner .members_items {
+.members-inner .members_items {
   margin-top: 4rem;
 }
 
@@ -1822,14 +1822,14 @@ main table tr td {
 }
 
 @media (max-width: 1249px) {
-  .members_items {
+  .members-home .members_items {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
   }
-  .members_items .item {
+  .members-home .members_items .item {
     margin-right: 1.6rem;
     width: calc(33.3% - 1.6rem);
   }
@@ -1856,6 +1856,12 @@ main table tr td {
   }
   .news_list_items .item {
     margin-right: 2.1rem;
+  }
+  .members-inner .item {
+    margin-right: 4.2rem;
+  }
+  .members-inner .item:nth-child(5n) {
+    margin-right: auto;
   }
 }
 
@@ -1885,6 +1891,9 @@ main table tr td {
   .news_list_items .item {
     margin-right: 1.8rem;
   }
+  .members-inner .item {
+    margin-right: 1.5rem;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -1893,6 +1902,8 @@ main table tr td {
   }
   .owl-carousel .owl-item img {
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1917,6 +1928,9 @@ main table tr td {
     margin-right: 1.8rem !important;
     width: calc(50% - 1.8rem);
   }
+  .members-inner .item {
+    margin-right: 2.3rem;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1930,21 +1944,32 @@ main table tr td {
   .arhive .item {
     margin-right: 0 !important;
   }
+  .members-inner .item {
+    width: 33.3%;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 750px) {
   .lastnews .item {
     width: 47%;
   }
-  .members_items .item {
+  .members-home .members_items .item {
     width: calc(50% - 1.6rem);
   }
-  .members_items .item a {
+  .members-home .members_items .item a {
     margin-left: auto;
     margin-right: auto;
   }
   main {
     text-align: justify;
+  }
+  .members-inner .item {
+    width: 50%;
+  }
+  .members-inner .item a {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1972,12 +1997,21 @@ main table tr td {
   .homecarousel .item .description {
     display: none;
   }
-  .members_items .item {
+  .members-home .members_items .item {
+    width: 100%;
+  }
+  .members-home .members_items .item .desc {
+    text-align: center;
+  }
+  .members-inner .item {
+    text-align: center;
     width: 100%;
   }
   .members_items .item .desc {
-    text-align: center;
-    padding-top: 3rem;
+    height: auto;
+  }
+  .members_items .item .desc p.title {
+    padding-top: 1rem;
   }
 }
 

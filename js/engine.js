@@ -21,7 +21,25 @@ $(document).ready(function(){
 		autoplay : false,
 		animateOut: 'fadeOut',
 		autoplayTimeout : 6000,
-		navText: ["", ""]
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			480:{
+				items:2
+			},
+			768:{
+				items:3
+			},
+			991:{
+				items:4
+			},
+			1200:{
+				items:5
+			}
+		}
 	});
 
 
