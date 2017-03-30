@@ -55,7 +55,7 @@ $(document).ready(function(){
 		responsive:{
 			0:{
 				items:1,
-				stagePadding: 50
+				stagePadding: 30
 			},
 			480:{
 				items:2
@@ -100,6 +100,7 @@ $(document).ready(function(){
 			closeMenu = function(e){
 				e.preventDefault();
 				$('body').removeClass('o-menu');
+				$('.header .top').height('auto');
 			};
 		init();
 	});	
@@ -109,6 +110,7 @@ $(document).ready(function(){
 
 	$('.top').hammer().on('panleft', function(){
 		$('body').removeClass('o-menu');
+		$('.header .top').height('auto');
 	});
 
 });

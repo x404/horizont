@@ -5,16 +5,21 @@
 	}
 
 }
-#map{
+.map{
 	position: relative;
 	text-align: center;
+	#map{
+		height: 500px;
+		width: 100%;
+	}
 	.box{
 		background-color: rgba(255, 255, 255, .85);
 		left: 50%;
-		margin-left: -370px;
+		margin-left: -390px;
 		position: absolute;
 		top: 0;
 		width: 785px;
+		z-index: 999;
 		.vcard{
 			@include font-size(1.5);
 			.name{

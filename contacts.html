@@ -108,13 +108,13 @@
 		<h1>Контакты</h1>
 	</div>
 	
-	<div id="map">
-		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab5e8fa7c82ce9237408fcd67fac6c53fb716b590ef769adefc23d48e35e29390&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+
+	<div class="map">
 		<div class="box">
 			<div class="vcard">
 				<div class="name"><span class="category">Туристский клуб</span> <span class="fn org">ГОРИЗОНТ</span></div>
 				<div class="adr">
-					 <span class="postal-code">49000</span>, <span class="locality">г. Днепр</span>, <span class="street-address">проспект. Александра Поля, дом 70А</span>
+					 <span class="postal-code">49000</span>, <span class="locality">г. Днепр</span>, <span class="street-address">проспект Александра Поля, дом 70А</span>
 				</div>
 				<div><a href="tel:+3809261234567" class="tel">+380 (926) 123-45-67</a> | <a href="mailto:info@gorizont.ua" class="email" title="">info@gorizont.ua</a></div>
 			</div>
@@ -134,8 +134,36 @@
 				</form>
 			</div>
 		</div>
-	</div>
+		<div id="map">
+		<script>
+		var map;
+		function initMap() {
+		var myLatlng = new google.maps.LatLng(48.445676, 35.017523);
+		var mapOptions = {
+			zoom: 18,
+			center: myLatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			scrollwheel : false
+		};
+		var styles = [{
+			stylers: [
+				{saturation: 0}
+				]
+			}];
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			map.setOptions({styles: styles});
 
+			var image = '/images/balloon.png';
+			var horizont = new google.maps.Marker({
+				position: {lat: 48.445440, lng: 35.017492},
+				map: map,
+				icon: image
+			});				
+		}
+		</script>
+		</div>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJon0oRy7AYzbHfD1DO2oSOEDaVRDxzHU&callback=initMap"></script>
+	</div>
 	<!-- InstanceEndEditable -->
 	
 	<div class="container">
